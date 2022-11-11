@@ -1,5 +1,4 @@
 const nodemailer = require("nodemailer");
-const PORT = process.env.PORT || 3000;
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -29,4 +28,4 @@ app.get("/results", (req, res) => {
     });
   })();
 });
-app.listen(PORT, () => console.log(`Server running`));
+app.listen(process.env.PORT || 3000);
